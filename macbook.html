@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptops & Co. - MacBook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Manrope', sans-serif; }
+        .airbnb-red { background-color: #FF385C; }
+        .airbnb-text-red { color: #FF385C; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- HEADER -->
+    <header class="fixed top-0 w-full z-50 bg-white border-b border-gray-200">
+        <div class="max-w-[2520px] mx-auto xl:px-20 md:px-10 sm:px-2 px-4">
+            <div class="flex flex-row items-center justify-between gap-3 md:gap-0 py-4">
+                <a href="index.html" class="hidden md:block cursor-pointer text-airbnb-text-red font-bold text-2xl flex items-center gap-2 decoration-0">
+                    <i class="fa-solid fa-laptop"></i> Laptops & Co.
+                </a>
+                <div class="border-[1px] w-full md:w-auto py-2 rounded-full shadow-sm hover:shadow-md transition cursor-pointer border-gray-300">
+                    <div class="flex flex-row items-center justify-between pl-6 pr-2">
+                        <!-- Search Input -->
+                        <input id="searchInput" type="text" placeholder="Any Brand" class="text-sm font-semibold px-6 border-r border-gray-300 outline-none bg-transparent placeholder-gray-800 w-full md:w-auto">
+                        
+                        <div class="text-sm font-semibold px-6 border-r border-gray-300 hidden sm:block">Any Specs</div>
+                        <div class="text-sm text-gray-600 px-6 hidden sm:block">Add Budget</div>
+                        <div id="searchBtn" class="p-2 airbnb-red rounded-full text-white cursor-pointer hover:scale-105 transition">
+                            <i class="fa-solid fa-magnifying-glass block px-1"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex flex-row items-center gap-4 relative">
+                    <div class="text-sm font-semibold py-3 px-4 rounded-full hover:bg-gray-100 transition cursor-pointer">List your device</div>
+                    <div class="p-4 md:py-1 md:px-2 border-[1px] border-gray-300 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md transition">
+                        <i class="fa-solid fa-bars"></i>
+                        <div class="hidden md:block"><i class="fa-solid fa-circle-user text-3xl text-gray-500"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CATEGORIES -->
+        <div class="pt-4 pb-2 overflow-x-auto flex flex-row items-center justify-between gap-8 overflow-auto no-scrollbar max-w-[2520px] mx-auto xl:px-20 md:px-10 sm:px-2 px-4">
+            <a href="index.html" class="flex flex-col items-center justify-center gap-2 p-2 border-b-2 border-transparent text-gray-500 hover:text-black hover:border-gray-300 transition cursor-pointer min-w-fit">
+                <i class="fa-solid fa-gamepad text-2xl"></i>
+                <div class="font-medium text-xs">Gaming</div>
+            </a>
+            <a href="business.html" class="flex flex-col items-center justify-center gap-2 p-2 border-b-2 border-transparent text-gray-500 hover:text-black hover:border-gray-300 transition cursor-pointer min-w-fit">
+                <i class="fa-solid fa-briefcase text-2xl"></i>
+                <div class="font-medium text-xs">Business</div>
+            </a>
+            <a href="creative.html" class="flex flex-col items-center justify-center gap-2 p-2 border-b-2 border-transparent text-gray-500 hover:text-black hover:border-gray-300 transition cursor-pointer min-w-fit">
+                <i class="fa-solid fa-pen-nib text-2xl"></i>
+                <div class="font-medium text-xs">Creative</div>
+            </a>
+            <a href="student.html" class="flex flex-col items-center justify-center gap-2 p-2 border-b-2 border-transparent text-gray-500 hover:text-black hover:border-gray-300 transition cursor-pointer min-w-fit">
+                <i class="fa-solid fa-book-open text-2xl"></i>
+                <div class="font-medium text-xs">Student</div>
+            </a>
+            <a href="macbook.html" class="flex flex-col items-center justify-center gap-2 p-2 border-b-2 border-black text-black cursor-pointer min-w-fit">
+                <i class="fa-brands fa-apple text-2xl"></i>
+                <div class="font-medium text-xs">MacBook</div>
+            </a>
+            <a href="ultrabooks.html" class="flex flex-col items-center justify-center gap-2 p-2 border-b-2 border-transparent text-gray-500 hover:text-black hover:border-gray-300 transition cursor-pointer min-w-fit">
+                <i class="fa-solid fa-bolt text-2xl"></i>
+                <div class="font-medium text-xs">Ultrabooks</div>
+            </a>
+        </div>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main class="max-w-[2520px] mx-auto xl:px-20 md:px-10 sm:px-2 px-4 pt-48 pb-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+             <div class="cursor-pointer group">
+                <div class="relative aspect-square w-full overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laptop" class="object-cover h-full w-full group-hover:scale-110 transition duration-300">
+                    <div class="absolute top-3 right-3"><i class="fa-regular fa-heart text-white text-xl hover:scale-110 transition drop-shadow-md"></i></div>
+                </div>
+                <div class="flex flex-col gap-1 mt-2">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-gray-900">MacBook Pro 14"</h3>
+                        <div class="flex items-center gap-1 text-sm"><i class="fa-solid fa-star text-xs"></i> 4.97</div>
+                    </div>
+                    <p class="text-gray-500 text-sm">M3 Pro, Space Black</p>
+                    <p class="text-gray-500 text-sm">Delivery Nov 21</p>
+                    <div class="flex items-center gap-1 mt-1"><span class="font-bold text-gray-900">$1,999</span> <span class="font-light text-gray-900">total</span></div>
+                </div>
+            </div>
+            <div class="cursor-pointer group">
+                <div class="relative aspect-square w-full overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laptop" class="object-cover h-full w-full group-hover:scale-110 transition duration-300">
+                    <div class="absolute top-3 right-3"><i class="fa-regular fa-heart text-white text-xl hover:scale-110 transition drop-shadow-md"></i></div>
+                </div>
+                <div class="flex flex-col gap-1 mt-2">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-gray-900">MacBook Air 15"</h3>
+                        <div class="flex items-center gap-1 text-sm"><i class="fa-solid fa-star text-xs"></i> 4.91</div>
+                    </div>
+                    <p class="text-gray-500 text-sm">M2, Big Screen</p>
+                    <p class="text-gray-500 text-sm">Delivery Dec 5</p>
+                    <div class="flex items-center gap-1 mt-1"><span class="font-bold text-gray-900">$1,299</span> <span class="font-light text-gray-900">total</span></div>
+                </div>
+            </div>
+             <div class="cursor-pointer group">
+                <div class="relative aspect-square w-full overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1531297461136-82lw8s8d9644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laptop" class="object-cover h-full w-full group-hover:scale-110 transition duration-300">
+                    <div class="absolute top-3 right-3"><i class="fa-regular fa-heart text-white text-xl hover:scale-110 transition drop-shadow-md"></i></div>
+                </div>
+                <div class="flex flex-col gap-1 mt-2">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-gray-900">MacBook Air 13"</h3>
+                        <div class="flex items-center gap-1 text-sm"><i class="fa-solid fa-star text-xs"></i> 4.88</div>
+                    </div>
+                    <p class="text-gray-500 text-sm">M2, Redesigned</p>
+                    <p class="text-gray-500 text-sm">Delivery Nov 24</p>
+                    <div class="flex items-center gap-1 mt-1"><span class="font-bold text-gray-900">$1,099</span> <span class="font-light text-gray-900">total</span></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Map Button -->
+    <div class="fixed bottom-12 left-1/2 transform -translate-x-1/2 z-50">
+        <button class="bg-[#222222] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition flex items-center gap-2 text-sm">
+            Show Map <i class="fa-solid fa-map"></i>
+        </button>
+    </div>
+
+    <!-- SEARCH SCRIPT -->
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const cards = document.querySelectorAll('.group');
+
+        function filterCards() {
+            const query = searchInput.value.toLowerCase();
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                card.style.display = text.includes(query) ? 'block' : 'none';
+            });
+        }
+
+        searchBtn.addEventListener('click', filterCards);
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') filterCards();
+        });
+    </script>
+</body>
+</html>

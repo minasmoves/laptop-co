@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptops & Co. - List Your Device</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Manrope', sans-serif; }
+        .airbnb-red { background-color: #FF385C; }
+        .airbnb-text-red { color: #FF385C; }
+        .airbnb-btn:hover { background-color: #D90B3E; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- HEADER (Simplified for Listing Flow) -->
+    <header class="fixed top-0 w-full z-50 bg-white border-b border-gray-200">
+        <div class="max-w-[2520px] mx-auto xl:px-20 md:px-10 sm:px-2 px-4">
+            <div class="flex flex-row items-center justify-between py-4">
+                <!-- Logo -->
+                <a href="index.html" class="cursor-pointer text-airbnb-text-red font-bold text-2xl flex items-center gap-2 decoration-0">
+                    <i class="fa-solid fa-laptop"></i> Laptops & Co.
+                </a>
+                
+                <!-- Exit / User Menu -->
+                <div class="flex flex-row items-center gap-4">
+                     <a href="index.html" class="text-sm font-semibold py-3 px-4 rounded-full hover:bg-gray-100 transition cursor-pointer text-gray-500">
+                        Exit
+                    </a>
+                    <div class="p-4 md:py-1 md:px-2 border-[1px] border-gray-300 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md transition">
+                        <i class="fa-solid fa-bars"></i>
+                        <div class="hidden md:block"><i class="fa-solid fa-circle-user text-3xl text-gray-500"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN FORM CONTENT -->
+    <main class="pt-32 pb-20 px-4">
+        <div class="max-w-2xl mx-auto">
+            
+            <!-- Intro -->
+            <div class="mb-8 text-center md:text-left">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">List your laptop details</h1>
+                <p class="text-gray-500 text-lg">Tell us about your device to get a price estimate and start selling.</p>
+            </div>
+
+            <form class="flex flex-col gap-6">
+                
+                <!-- SECTION: Basics -->
+                <div class="flex flex-col gap-4 pb-6 border-b border-gray-200">
+                    <h2 class="text-xl font-semibold">The Basics</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-xs font-bold text-gray-500 uppercase">Brand</label>
+                            <input type="text" placeholder="e.g. Apple, Dell" class="p-4 border border-gray-400 rounded-xl outline-none focus:border-black focus:ring-1 focus:ring-black transition">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-xs font-bold text-gray-500 uppercase">Model</label>
+                            <input type="text" placeholder="e.g. MacBook Pro M3" class="p-4 border border-gray-400 rounded-xl outline-none focus:border-black focus:ring-1 focus:ring-black transition">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label class="text-xs font-bold text-gray-500 uppercase">Condition</label>
+                        <select class="p-4 border border-gray-400 rounded-xl outline-none focus:border-black focus:ring-1 focus:ring-black transition bg-white cursor-pointer">
+                            <option>New (Sealed)</option>
+                            <option>Used - Like New</option>
+                            <option>Used - Good</option>
+                            <option>Used - Fair</option>
+                            <option>For Parts</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- SECTION: Specs -->
+                <div class="flex flex-col gap-4 pb-6 border-b border-gray-200">
+                    <h2 class="text-xl font-semibold">Specs & Features</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Processor (e.g. i7, M2)" class="p-4 border border-gray-400 rounded-xl outline-none focus:border-black focus:ring-1 focus:ring-black transition">
+                        <input type="text" placeholder="RAM (e.g. 16GB)" class="p-4 border border-gray-400 rounded-xl outline-none focus:border-black focus:ring-1 focus:ring-black transition">
+                        <input type="text" placeholder="Storage (e.g. 512GB SSD)" class="p-4 border border-gray-400 rounded-xl outline-none focus:border-black focus:ring-1 focus:ring-black transition">
+                        <input type="text" placeholder="GPU (Optional)" class="p-4 border border-gray-400 rounded-xl outline-none focus:border-black focus:ring-1 focus:ring-black transition">
+                    </div>
+                </div>
+
+                <!-- SECTION: Photos -->
+                <div class="flex flex-col gap-4 pb-6 border-b border-gray-200">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-xl font-semibold">Photos</h2>
+                        <span class="text-sm text-gray-500">Add at least 3 photos</span>
+                    </div>
+                    
+                    <div class="border-2 border-dashed border-gray-300 rounded-xl p-10 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-gray-50 transition h-64">
+                        <i class="fa-solid fa-camera text-4xl text-gray-400 mb-4"></i>
+                        <div class="font-semibold text-lg">Drag your photos here</div>
+                        <div class="text-sm text-gray-500 mt-1">Choose at least 3 photos</div>
+                        <div class="mt-4 underline font-semibold text-sm">Upload from device</div>
+                    </div>
+                </div>
+
+                <!-- SECTION: Description & Price -->
+                <div class="flex flex-col gap-4 pb-6">
+                    <h2 class="text-xl font-semibold">Description & Price</h2>
+                    
+                    <textarea rows="4" placeholder="Tell buyers about your laptop... (e.g. 'Battery life is great, slight scratch on lid')" class="p-4 border border-gray-400 rounded-xl outline-none focus:border-black focus:ring-1 focus:ring-black transition resize-none"></textarea>
+                    
+                    <div class="relative">
+                        <div class="absolute top-4 left-4 text-gray-500">$</div>
+                        <input type="number" placeholder="Price" class="p-4 pl-8 border border-gray-400 rounded-xl outline-none focus:border-black focus:ring-1 focus:ring-black transition w-full font-semibold text-lg">
+                    </div>
+                </div>
+
+                <!-- Footer Actions -->
+                <div class="flex items-center justify-between mt-4 pt-6 border-t border-gray-200">
+                    <a href="index.html" class="font-semibold underline hover:text-gray-600 cursor-pointer">Back</a>
+                    <button type="button" onclick="alert('Listing Created Successfully!')" class="airbnb-red airbnb-btn text-white px-8 py-3 rounded-lg font-bold text-lg transition shadow-md">
+                        Create Listing
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200 py-6 mt-10">
+        <div class="max-w-[2520px] mx-auto px-10 flex justify-center text-sm text-gray-600">
+            © 2025 Laptops & Co, Inc.
+        </div>
+    </footer>
+
+</body>
+</html>
